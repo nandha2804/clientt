@@ -18,7 +18,7 @@ export default function Login() {
     setIsLoading(true);
   
     try {
-      const response = await axios.post("http://127.0.0.1:8000/auth/login/", formData);
+      const response = await axios.post("https://nandha28.pythonanywhere.com/auth/login/", formData);
       localStorage.setItem("accessToken", response.data.tokens.access);
       localStorage.setItem("refreshToken", response.data.tokens.refresh);
       localStorage.setItem("user", JSON.stringify(response.data));
